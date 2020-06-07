@@ -1,0 +1,93 @@
+body {
+  font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+  background-image: url('../img/event.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:100%;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+hr{
+  width: 95%;
+  border: 1.5px solid #404040;
+  border-radius: 4px;
+  margin-top: 35px;
+}
+
+.container{
+  background-color: rgba(242, 242, 242,0.8);
+  width: 80%;
+  margin: 20px auto;
+  padding:15px;
+  border-radius: 8px;
+
+}
+
+h1{
+  margin:5px 0px;
+  font-family: 'Lexend Tera', sans-serif;
+}
+input[type=text]{
+   width:100%;
+   display: inline-block;
+   border: none;
+   padding:10px 0px;
+
+ }
+
+ textarea{
+   width: 100%;
+   height:300px;
+   display: inline-block;
+   border: none;
+   padding-top: 10px;
+
+ }
+ #description{
+   width: 100%;
+   height:150px;
+   display: inline-block;
+   border: none;
+   padding-top: 10px;
+
+ }
+
+ input:focus, textarea:focus {
+   background-color: #ddd;
+   outline: none;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: #0073e6;
+  border-radius: 4px;
+  padding: 5px 7px;
+  font-size: 16px;
+}
+
+button{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: #0073e6;
+  border-radius: 4px;
+  padding: 6px 7px;
+  border: none;
+  font-size: 16px;
+}
+a:hover{
+  cursor: pointer;
+}
+button:hover{
+  cursor: pointer;
+}
+input[type=checkbox]{
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}

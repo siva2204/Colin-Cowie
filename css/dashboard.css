@@ -1,0 +1,103 @@
+body{
+  font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+  background-image: url('../img/dashboard.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:100%;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  padding: 16px;
+  width:85%;
+  margin:16px auto;
+  border-radius: 5px;
+  text-align: center;
+}
+#home{
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0073e6;
+  opacity: 0.9;
+  margin: 5px;
+
+}
+.header{
+  font-family: 'Lexend Tera', sans-serif;
+}
+
+a:hover{
+  opacity:1;
+}
+img{
+  width:200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.container p{
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.event{
+  text-align: center;
+  background-color:rgb(179, 179, 179,0.8);
+  color: black;
+  padding:16px 20px;
+  width: 65%;
+  border-radius: 8px;
+  margin:25px auto ;
+
+}
+.event a{
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  color: white;
+  opacity: 0.9;
+  margin: 5px;
+
+}
+.event a:hover{
+  opacity:1;
+}
+.event h1{
+  margin:10px;
+}
+.date{
+  color: #404040;
+  padding:4px;
+}
+
+.description{
+  font-size: 18px;
+  padding-left: 4px;
+  margin-bottom: 25px;
+}
+#readmore{
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+hr{
+  width: 95%;
+
+  border: 1.5px solid #404040;
+  border-radius: 4px;
+  margin-top: 35px;
+}
+@media screen and (max-width: 768px) {
+  .container{
+    width:90%;
+  }
+}

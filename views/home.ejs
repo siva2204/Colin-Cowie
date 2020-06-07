@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+  </head>
+  <body>
+  <div class="topnav" id="myTopnav">
+    <a  href="#home" class="active">Colin Cowie</a>
+    <a class="left" href="/users/logout">Logout</a>
+    <a class="left" href="/home/dashboard">Dashboard</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="container">
+
+    <h1>Hey <%=name%>! </h1>
+    <h3>Schedule your event here</h3>
+    <a href="/home/public_event">Public event</a>
+    <a href="/home/private_event">Private event</a>
+
+  </div>
+  <hr>
+
+
+    <h1 id="invitation">Invitations</h1>
+     <%if(publicevents.length + privateevents.length== 0 ){%>
+       <p>Currntly no invitations</p>
+     <%}%>
+
+
+      <%publicevents.forEach(event =>{%>
+      <div class="event">
+        <h1><%= event.title %></h1>
+        <div class="date">Hosted by <%=event.name%> on <%= event.createdAt.toLocaleDateString() %></div>
+        <div class="description"><%= event.description %></div>
+        <a class="readmore" id="readmore" href="/events/<%=event.id %>">View Invitation</a>
+        <a class="accept-btn" href="/home/event/accept/<%=event.id%>">Accept</a>
+        <a class="reject-btn" href="/home/event/reject/<%=event.id%>">Reject</a>
+      </div>
+      <%})%>
+
+
+
+
+      <%privateevents.forEach(event =>{%>
+      <div class="event">
+        <h1><%= event.title %></h1>
+        <div class="date">Hosted by <%=event.name%> on <%= event.createdAt.toLocaleDateString() %></div>
+        <div class="description"><%= event.description %></div>
+        <a class="readmore" href="/home/events/<%=event.id %>">View Invitation</a>
+        <a class="accept-btn" href="/home/event/accept/<%=event.id%>">Accept</a>
+        <a class="reject-btn" href="/home/event/reject/<%=event.id%>">Reject</a>
+      </div>
+      <%})%>
+
+
+    <script type="text/javascript">
+    function myFunction() {
+     var x = document.getElementById("myTopnav");
+     if (x.className === "topnav") {
+       x.className += " responsive";
+      } else {
+       x.className = "topnav";
+      }
+    }
+    </script>
+
+  </body>
+</html>

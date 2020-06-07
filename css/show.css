@@ -1,0 +1,51 @@
+body {
+  font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+  background-image: url('../img/show-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width:100%;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.container{
+  text-align: center;
+  width:65%;
+  margin:25px auto;
+  background-color:rgba(241, 241, 241,0.8);
+  border-radius: 8px;
+}
+#home{
+  text-decoration: none;
+  text-align: center;
+  padding: 4px 10px;
+  font-size: 19px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0073e6;
+  opacity: 0.9;
+  margin: 5px;
+}
+a:hover{
+  opacity:1;
+}
+h1{
+  font-size: 45px;
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 15px;
+  word-spacing: 9px;
+  margin-top:20px;
+  padding-top: 20px;
+}
+h3{
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 2.5px;
+  word-spacing: 9px;
+}
+
+pre{
+  font-family: 'Roboto Mono', sans-serif;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <p style="text-align:center;"><img src="../img/profile.jpg" alt="profile.img"></p>
+      <p><%=user.name%></p>
+      <p><%=user.email%></p>
+      <a id="home" href="/home">Home</a>
+      <hr>
+      <h1 class="header">Upcoming events</h1>
+        <% if(publicevents.length + privateevents.length ==0){%>
+          <p>No upcoming events</p>
+        <%}%>
+
+        <%publicevents.forEach(event =>{%>
+          <div class="event">
+           <h1><%= event.title %></h1>
+           <div class="date">Hosted by <%=event.name%> on <%= event.createdAt.toLocaleDateString() %></div>
+           <div class="description"><%= event.description %></div>
+           <a id="readmore" href="/events/<%=event.id %>">View more</a>
+          </div>
+
+        <%})%>
+
+
+
+
+        <%privateevents.forEach(event =>{%>
+          <div class="event">
+           <h1><%= event.title %></h1>
+           <div class="date">Hosted by <%=event.name%> on <%= event.createdAt.toLocaleDateString() %></div>
+           <div class="description"><%= event.description %></div>
+           <a id="readmore" href="/events/<%=event.id %>">View more</a>
+          </div>
+
+        <%})%>
+
+
+      <hr>
+      <h1 class="header">Events posted</h1>
+      <% if(created_publicevents.length + created_privateevents.length == 0){%>
+        <p>No events posted</p>
+      <%}%>
+
+
+        <%created_publicevents.forEach(event =>{%>
+          <div class="event">
+           <h1><%= event.title %></h1>
+           <div class="date">Event created on <%= event.createdAt.toLocaleDateString() %></div>
+           <div class="description"><%= event.description %></div>
+           <a id="readmore" href="/events/<%=event.id %>">View more</a>
+          </div>
+
+        <%})%>
+
+
+
+
+
+        <%created_privateevents.forEach(event =>{%>
+          <div class="event">
+           <h1><%= event.title %></h1>
+           <div class="date"><%= event.createdAt.toLocaleDateString() %></div>
+           <div class="description"><%= event.description %></div>
+           <a id="readmore" href="/home/events/<%=event.id %>">View more</a>
+          </div>
+
+        <%})%>
+
+
+    </div>
+
+
+
+  </body>
+</html>
