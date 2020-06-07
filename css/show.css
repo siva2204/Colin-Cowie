@@ -49,3 +49,9 @@ h3{
 pre{
   font-family: 'Roboto Mono', sans-serif;
 }
+@media screen and (max-width: 768px) {
+  .container{
+    width:85%;
+  }
+
+}
